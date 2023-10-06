@@ -40,4 +40,4 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          tags: personal-o2wa:latest
+          tags: miguelangel-nubla/personal-o2wa:latest
