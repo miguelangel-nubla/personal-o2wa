@@ -4,7 +4,7 @@ FROM golang:latest AS go-builder
 
 WORKDIR /app
 
-RUN GOBIN=/app CGO_ENABLED=0 go install github.com/miguelangel-nubla/ruckus-dpsk-manager@latest
+RUN GOBIN=/app CGO_ENABLED=0 go install github.com/miguelangel-nubla/ruckus-dpsk-manager/cmd/ruckus-dpsk-manager@latest
 
 FROM ghcr.io/miguelangel-nubla/o2wa:latest
 
