@@ -8,7 +8,7 @@ RUN GOBIN=/app CGO_ENABLED=0 go install github.com/miguelangel-nubla/ruckus-dpsk
 
 FROM ghcr.io/miguelangel-nubla/o2wa:latest
 
-RUN apt-get update && apt-get install -y expect qrencode && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y jq qrencode expect && rm -rf /var/lib/apt/lists/*
 
 COPY --from=go-builder /app/ruckus-dpsk-manager /bin/ruckus-dpsk-manager
 COPY --from=kanidm-tools /usr/sbin/kanidm /bin/kanidm
